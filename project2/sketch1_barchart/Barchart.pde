@@ -24,6 +24,9 @@ class Barchart extends Frame {
       h = h * 3;
       fill(0);
       text(myTable.getString(i,"YEAR"), 100+i*46,520);
+      stroke(0);
+      line(95,500,500,500);
+      line(95,95,95,500);
       text("YEAR", 298,550);
       text("VALUE1", 20,296);
       text("Democrats",520,40);
