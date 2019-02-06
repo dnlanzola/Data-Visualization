@@ -4,7 +4,7 @@ Frame myFrame = null;
 
 
 void setup(){
-  size(600,600);  
+  size(800,600);  
   selectInput("Select a file to process:", "fileSelected");
 }
 
@@ -16,7 +16,7 @@ void fileSelected(File selection) {
   } else {
     println("User selected " + selection.getAbsolutePath());
     myTable = loadTable( selection.getAbsolutePath(), "header" );
-    // TODO: create object
+    myFrame = new Scatterplot( myTable, myTable.getColumnTitles()[0] );
   }
 }
 
