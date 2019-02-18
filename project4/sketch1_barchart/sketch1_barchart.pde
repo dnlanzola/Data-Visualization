@@ -4,7 +4,7 @@ Frame myFrame = null;
 
 
 void setup(){
-  size(600,600);  
+  size(1000,700);  
   selectInput("Select a file to process:", "fileSelected");
 }
 
@@ -16,7 +16,8 @@ void fileSelected(File selection) {
   } else {
     println("User selected " + selection.getAbsolutePath());
     myTable = loadTable( selection.getAbsolutePath(), "header" );
-    // TODO: create object
+    myFrame = new Barchart( myTable, myTable.getColumnTitles()[0] );
+    
   }
 }
 

@@ -16,7 +16,7 @@ void fileSelected(File selection) {
   } else {
     println("User selected " + selection.getAbsolutePath());
     myTable = loadTable( selection.getAbsolutePath(), "header" );
-    // TODO: create object
+    myFrame = new Splom( myTable, myTable.getColumnTitles()[0] );
   }
 }
 
