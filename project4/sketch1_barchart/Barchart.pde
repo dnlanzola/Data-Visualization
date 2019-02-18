@@ -53,13 +53,14 @@ class Barchart extends Frame {
       IF THE VALUE IS DEM IT WILL FILL THE BAR WITH BLUE */
 
 
-      text("SATM:",720,40);
-      text("SATV:",720,60);
-      text("ACT:",720,80);
-      text("GPA:",720,100);
+
 
       if ( dist( mouseX, mouseY, 100 + i*3, 650-h ) < 2 ) {
         fill( 255, 0, 0 );
+        text("SATM:",720,40);
+        text("SATV:",720,60);
+        text("ACT:",720,80);
+        text("GPA:",720,100);
         text(myTable.getString(i,"SATM"),760,40);
         text(myTable.getString(i,"SATV"),760,60);
         text(myTable.getString(i,"ACT"),760,80);
