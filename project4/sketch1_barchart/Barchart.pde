@@ -17,7 +17,7 @@ class Barchart extends Frame {
   void draw() {  
      
      text("SATM vs. SATV",60,40);
-     
+
     for (int i = 0; i < myTable.getRowCount(); i++)
     {
       /* GET VALUE FROM TABLE
