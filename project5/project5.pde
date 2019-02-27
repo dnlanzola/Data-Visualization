@@ -4,7 +4,7 @@ Frame myFrame = null;
 
 
 void setup(){
-  size(600,600);  
+  size(1000,600);  
   selectInput("Select a file to process:", "fileSelected");
 }
 
@@ -16,7 +16,8 @@ void fileSelected(File selection) {
   } else {
     println("User selected " + selection.getAbsolutePath());
     myTable = loadTable( selection.getAbsolutePath(), "header" );
-    // TODO: create object
+    myFrame = new Linechart( myTable, myTable.getColumnTitles()[0] );
+    
   }
 }
 
@@ -65,6 +66,6 @@ abstract class Frame {
   boolean mouseInside(){
      return (u0-clickBuffer < mouseX) && (u0+w+clickBuffer)>mouseX && (v0-clickBuffer)< mouseY && (v0+h+clickBuffer)>mouseY; 
   }
+
+  }
   
-  
-}
