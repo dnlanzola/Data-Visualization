@@ -37,6 +37,20 @@ class Linechart extends Frame {
         // SETTING UP Y-AXIS
         line(width / 10,((height / 5) * 4), width / 10, (height / 5) * 0.75);
     
+      fill(0,0,0);
+      textSize(10);
+      int i = 0;
+      int max = 100;
+            while ( i < 11)
+        {
+           text( max, (height / 35) * 5 , (width/ 8.5) + (i*35)); 
+           i = i + 1;
+           max = max - 10;
+        }
+    
+    textAlign(LEFT);
+    text("Press 1, 2, 3, or 4 to exchange axis data.", 10, height - 10);
+    
     
     if (key == '1')
       view = 0;
@@ -82,7 +96,7 @@ class Linechart extends Frame {
         IntList xScale = new IntList();
         int val = 0;
         
-        for (int i = 0; i < myTable.getRowCount(); i++)
+        for (i = 0; i < myTable.getRowCount(); i++)
         {
             val = myTable.getInt(i,0);
             
@@ -94,7 +108,7 @@ class Linechart extends Frame {
         
         textSize(10);
         fill(0, 0, 0);
-        int i = 0;
+        i = 0;
         while ( i < xScale.size())
         {
            text(xScale.get(i), (width/ 8.5) + (i*20), (height / 6) * 5 ); 
@@ -121,11 +135,11 @@ class Linechart extends Frame {
         textSize(10);
         fill(0, 0, 0);
         i = 0;
-        while ( i < xScale.size())
-        {
-           text( (yScale.get(i)) / 10, (height / 35) * 5 , (width/ 8.5) + (i*9)); 
-           i = i + 3;
-        }
+        //while ( i < xScale.size())
+        //{
+        //   text( (yScale.get(i)) / 10, (height / 35) * 5 , (width/ 8.5) + (i*9)); 
+        //   i = i + 3;
+        //}
         
         int minX = xScale.min();
         int minY = yScale.min();
@@ -269,7 +283,7 @@ class Linechart extends Frame {
         IntList xScale = new IntList();
         int val = 0;
         
-        for (int i = 0; i < myTable.getRowCount(); i++)
+        for (i = 0; i < myTable.getRowCount(); i++)
         {
             val = myTable.getInt(i,1);
             
@@ -281,7 +295,7 @@ class Linechart extends Frame {
         
         textSize(10);
         fill(0, 0, 0);
-        int i = 0;
+        i = 0;
         while ( i < (xScale.size() - 1))
         {
            text(xScale.get(i), (width/ 8.5) + (i*20), (height / 6) * 5 ); 
@@ -458,7 +472,7 @@ class Linechart extends Frame {
         IntList xScale = new IntList();
         int val = 0;
         
-        for (int i = 0; i < myTable.getRowCount(); i++)
+        for (i = 0; i < myTable.getRowCount(); i++)
         {
             val = myTable.getInt(i,2);
             
@@ -470,7 +484,7 @@ class Linechart extends Frame {
         
         textSize(10);
         fill(0, 0, 0);
-        int i = 0;
+        i = 0;
         while ( i < (xScale.size() - 1))
         {
            text(xScale.get(i), (width/ 8.5) + (i*42), (height / 6) * 5 ); 
@@ -632,7 +646,7 @@ class Linechart extends Frame {
           fill(0,0,0);
           text("GPA vs. SATV",(width/11)*10,40);
           text("GPA vs. SATM",(width/11)*10,60);
-          text("GPA vs. GPA",(width/11)*10,80);
+          text("GPA vs. ACT",(width/11)*10,80);
           
           /* COLORED SQUARES FOR LEGEND  */
           stroke(0);
@@ -647,7 +661,7 @@ class Linechart extends Frame {
         IntList xScale = new IntList();
         int val = 0;
         
-        for (int i = 0; i < myTable.getRowCount(); i++)
+        for (i = 0; i < myTable.getRowCount(); i++)
         {
             val = myTable.getInt(i,3);
             
@@ -659,7 +673,7 @@ class Linechart extends Frame {
         
         textSize(10);
         fill(0, 0, 0);
-        int i = 0;
+        i = 0;
         while ( i < (xScale.size() - 1))
         {
            text(xScale.get(i), (width/ 8.5) + (i*80), (height / 6) * 5 ); 
