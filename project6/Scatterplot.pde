@@ -64,6 +64,14 @@ class Scatterplot extends Frame {
 
         }
 
+     textAlign(RIGHT);
+     text(maxVal, xAxis1, yAxis2);
+     text(minVal, xAxis1, yAxis);
+     text(  ((maxVal-minVal)/2 ) + minVal,xAxis1, height * 0.40);
+     
+     textAlign(CENTER);  
+
+
     }
   
   
