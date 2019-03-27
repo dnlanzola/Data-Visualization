@@ -65,7 +65,7 @@ void draw()
   text("Calvin College Dataset", width * 0.5, height * 0.025);
   textSize(10);
   textAlign(LEFT);
-  text("Press B and/or P to switch views.", width*0.025, height*0.025);
+  text("Press B and/or P to switch views. Click on data to view linked data.", width*0.025, height*0.025);
         //X1    Y1    X2      Y2
   //line (width/2, 0, width/2, height);
   //line (0, 20, width, 20);
