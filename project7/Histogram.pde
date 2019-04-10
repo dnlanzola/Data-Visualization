@@ -26,7 +26,7 @@ class Histogram extends Frame {
 
     void draw() {  
 
-      // calculate the working area (length & width)
+
   float xAxisMin = width * 0.5;
   float xAxisMax = width * 0.99;
   float yAxisMin = height * 0.97;
@@ -44,9 +44,6 @@ class Histogram extends Frame {
 
 
 
-  
-  
-       // x-axes titles
       textSize(10);
       fill(0);
       text(myTable.getColumnTitle(0), width * 0.62, height * 0.79);
@@ -56,7 +53,7 @@ class Histogram extends Frame {
       
 
   
-  // creates storage for each column and counts their min and max values
+
   for (int j = 0; j < myTable.getColumnCount(); j++)
   {
     for (int i = 0; i < myTable.getRowCount(); i++)
@@ -86,7 +83,7 @@ class Histogram extends Frame {
 
 for (int j = 0; j < myTable.getColumnCount(); j++)
   {
-    // -------------------------------------------------- histogram lower half ------------------------------------------------
+ 
     if (j > 1)
     {
       // x and y axis lines
@@ -124,11 +121,11 @@ for (int j = 0; j < myTable.getColumnCount(); j++)
         maxY = yPerAux;
       }
       
-      // x and y tick increments
+
       xPer1 = (xPerAux - xAxisValuesAux) / 7;
       yPer1 = (yPerAux - yAxisValuesAux) / 7;
       
-      // x-axis ticks and values
+
       int count = 0;
       for(float valX = xAux3 + (width * 0.01); valX < xAux4; valX += xPer)
       {
@@ -137,7 +134,7 @@ for (int j = 0; j < myTable.getColumnCount(); j++)
         fill(0);
         text(xAxisValuesAux, valX, yAux3 + (height * 0.015));
         
-        // store x tick val
+
         xAxisValues[count] = xAxisValuesAux;
         
         if (count != 0)
@@ -168,7 +165,7 @@ for (int j = 0; j < myTable.getColumnCount(); j++)
       }
 
       
-      // y-axis ticks and values
+
       for(float valY = yAux3; valY > yAux4; valY -= yPer)
       {
         textSize(8);
@@ -178,7 +175,7 @@ for (int j = 0; j < myTable.getColumnCount(); j++)
       }
 
       
-      // draws bars
+
       for (int i = 1; i < 8; i++)
       {
         float xMap = map(xAxisValues[i], minX, maxX, xAux3 - (width * 0.018), xAux4 - (width * 0.037));
@@ -228,11 +225,9 @@ for (int j = 0; j < myTable.getColumnCount(); j++)
   
   else
     {
-      // x and y axis lines
       line(xAux1, yAux1, xAux2, yAux1);
       line(xAux1, yAux1, xAux1, yAux2);
       
-      // x and y tick space
       xPer = (xAux2 - xAux1 + (width * 0.01)) / 8;
       yPer = (yAux1 - yAux2) / 8;
       
@@ -263,7 +258,6 @@ for (int j = 0; j < myTable.getColumnCount(); j++)
         maxY = yPerAux;
       }
       
-      // x and y tick increments
       xPer1 = (xPerAux - xAxisValuesAux) / 7;
       yPer1 = (yPerAux - yAxisValuesAux) / 7;
       
@@ -274,7 +268,6 @@ for (int j = 0; j < myTable.getColumnCount(); j++)
         fill(0);
         text(xAxisValuesAux, valX, yAux1 + (height * 0.015));
         
-        // store x tick val
         xAxisValues[count] = xAxisValuesAux;
         
         if (count != 0)
@@ -314,8 +307,7 @@ for (int j = 0; j < myTable.getColumnCount(); j++)
         yAxisValuesAux += yPer1;
       }
 
-      
-      // draws bars
+
       for (int i = 1; i < 8; i++)
       {
         float xMap = map(xAxisValues[i], minX, maxX, xAux1 - (width * 0.018), xAux2 - (width * 0.037));
