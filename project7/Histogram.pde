@@ -86,11 +86,9 @@ for (int j = 0; j < myTable.getColumnCount(); j++)
  
     if (j > 1)
     {
-      // x and y axis lines
       line(xAux3, yAux3, xAux4, yAux3);
       line(xAux3, yAux3, xAux3, yAux4);
       
-      // x and y tick space
       xPer = (xAux4 - xAux3 + (width * 0.01)) / 8;
       yPer = (yAux3 - yAux4) / 8;
       
